@@ -11,7 +11,7 @@ do
   exprs=$exprs" -e \"$expr\""
 done
 
-for file in $(find)
+for file in $(find . -type f)
 do
   if [ -z "$(echo "$file" | grep -e "/\." -e "$\.[^/]")" ]
   then
